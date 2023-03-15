@@ -20,7 +20,7 @@ module Mosaico
     end
 
     def url
-      Mosaico::Engine.routes.url_helpers.mosaico_image_path(self)
+      self.class.backend.url_to(file)
     end
   end
 end
